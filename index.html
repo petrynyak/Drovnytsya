@@ -6,7 +6,7 @@
 <title>Дровниця в інтер'єрі</title>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
 <style>
-  html,body{margin:0;height:100%;background:#1e1e1e;font-family:system-ui,sans-serif;color:#fff;overflow:hidden}
+  html,body{margin:0;height:100%;background:#e8e6e1;font-family:system-ui,sans-serif;color:#fff;overflow:hidden}
   #cam{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;display:none}
   model-viewer{position:fixed;inset:0;width:100%;height:100%;background:transparent;--poster-color:transparent}
   .bar{position:fixed;left:0;right:0;bottom:0;padding:12px 12px calc(12px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:8px;justify-content:center;background:linear-gradient(transparent,rgba(0,0,0,.6))}
@@ -18,7 +18,7 @@
 </head>
 <body>
 <video id="cam" autoplay playsinline muted></video>
-<model-viewer id="mv" src="drovnytsia_z_drovamy.glb" alt="Дровниця 1600×500×300 мм"
+<model-viewer id="mv" src="drovnytsia_z_drovamy.glb?v=2" alt="Дровниця 1600×500×300 мм"
   camera-controls touch-action="pan-y" camera-orbit="-30deg 80deg auto"
   shadow-intensity="1" exposure="1.1"
   ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor">
@@ -42,7 +42,7 @@ document.getElementById('camBtn').onclick=async e=>{
   }catch(err){hint.innerHTML='<span id="err">Не вдалося відкрити камеру: дозвольте доступ у браузері</span>';}
 };
 document.getElementById('logsBtn').onclick=e=>{
-  withLogs=!withLogs;mv.src=withLogs?'drovnytsia_z_drovamy.glb':'drovnytsia.glb';
+  withLogs=!withLogs;mv.src=withLogs?'drovnytsia_z_drovamy.glb?v=2':'drovnytsia.glb?v=2';
   e.target.textContent=withLogs?'Без дров':'З дровами';
 };
 document.getElementById('arBtn').onclick=()=>{
