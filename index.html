@@ -18,7 +18,7 @@
 </head>
 <body>
 <video id="cam" autoplay playsinline muted></video>
-<model-viewer id="mv" src="drovnytsia_z_drovamy.glb?v=2" alt="Дровниця 1600×500×300 мм"
+<model-viewer id="mv" src="drovnytsia_z_drovamy.glb?v=3" alt="Дровниця 1600×500×300 мм"
   camera-controls touch-action="pan-y" camera-orbit="-30deg 80deg auto"
   shadow-intensity="1" exposure="1.1"
   ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor">
@@ -42,7 +42,7 @@ document.getElementById('camBtn').onclick=async e=>{
   }catch(err){hint.innerHTML='<span id="err">Не вдалося відкрити камеру: дозвольте доступ у браузері</span>';}
 };
 document.getElementById('logsBtn').onclick=e=>{
-  withLogs=!withLogs;mv.src=withLogs?'drovnytsia_z_drovamy.glb?v=2':'drovnytsia.glb?v=2';
+  withLogs=!withLogs;mv.src=withLogs?'drovnytsia_z_drovamy.glb?v=3':'drovnytsia.glb?v=3';
   e.target.textContent=withLogs?'Без дров':'З дровами';
 };
 document.getElementById('arBtn').onclick=()=>{
